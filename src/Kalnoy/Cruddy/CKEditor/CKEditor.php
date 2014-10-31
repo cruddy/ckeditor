@@ -12,7 +12,7 @@ class CKEditor extends BaseTextField {
     /**
      * {@inheritdoc}
      */
-    protected $class = 'CKEditor';
+    protected $class = 'Cruddy.Fields.CKEditor';
 
     /**
      * {@inheritdoc}

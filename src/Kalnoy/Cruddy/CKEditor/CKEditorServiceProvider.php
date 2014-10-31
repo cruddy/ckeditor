@@ -14,9 +14,6 @@ class CKEditorServiceProvider extends ServiceProvider {
     public function boot()
     {
         $this->package('cruddy/ckeditor', 'cruddy-ckeditor', realpath(__DIR__.'/../../../'));
-
-        $this->registerFields($this->app['cruddy.fields']);
-        $this->registerAssets($this->app['cruddy.assets'], 'packages/cruddy/ckeditor');
     }
 
     /**
@@ -43,7 +40,15 @@ class CKEditorServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        //
+        $this->app->resolving('cruddy.assets', function ($assets)
+        {
+            $this->registerAssets($assets, 'packages/cruddy/ckeditor');
+        });
+
+        $this->app->resolving('cruddy.fields', function ($factory)
+        {
+            $this->registerFields($factory);
+        });
     }
 
 }
