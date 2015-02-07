@@ -3,7 +3,7 @@ A [CKEditor](http://ckeditor.com) for [Cruddy](http://github.com/lazychaser/crud
 ## Installation
 
 ```
-composer require cruddy/ckeditor:dev-master@dev
+composer require cruddy/ckeditor:0.5.*@dev
 ```
 
 Include a service provider:
@@ -15,11 +15,19 @@ Include a service provider:
 Publish assets:
 
 ```
-php artisan asset:publish cruddy/ckeditor
+php artisan vendor:publish
 ```
 
 ## Usage
 
 ```php
 $schema->ckedit('description');
+```
+
+Providing configuration:
+
+```php
+$schema->ckedit('description')->config([
+    'skin' => 'myskin,/myskin/',
+]);
 ```

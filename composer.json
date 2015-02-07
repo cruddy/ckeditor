@@ -1,25 +1,28 @@
 {
     "name": "cruddy/ckeditor",
-    
+
     "description": "A CKEditor for Cruddy.",
-    
+
+    "keywords": [ "cruddy", "ckeditor" ],
+
     "authors": [
-        {
-            "name": "Alexander Kalnoy",
-            "email": "lazychaser@gmail.com"
-        }
+        { "name": "Alexander Kalnoy",  "email": "lazychaser@gmail.com" }
     ],
-    
+
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.2.*"
+        "illuminate/support": "5.0.*",
+        "kalnoy/cruddy": "0.5.*@dev"
     },
 
     "autoload": {
-        "psr-0": {
-            "Kalnoy\\Cruddy\\CKEditor\\": "src/"
-        }
+        "psr-4": { "Kalnoy\\Cruddy\\CKEditor\\": "src/" }
     },
 
-    "minimum-stability": "stable"
+    "extra": {
+        "branch-alias": {
+            "dev-master": "v0.5.x-dev"
+        }
+    }
+
 }

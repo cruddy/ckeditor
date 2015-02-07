@@ -1,0 +1,29 @@
+{
+    "name": "cruddy/ace",
+
+    "version": "0.1.0",
+
+    "homepage": "https://github.com/cruddy/ace",
+
+    "authors": [
+        "Aleksander Kalnoy <lazychaser@gmail.com>"
+    ],
+
+    "license": "MIT",
+
+    "private": true,
+
+    "ignore": [
+        "**/.*",
+        "*.xml",
+        "node_modules",
+        "assets/vendor/",
+        "tests",
+        "public",
+        "src",
+        "vendor"
+    ],
+
+    "dependencies": {
+    }
+}
