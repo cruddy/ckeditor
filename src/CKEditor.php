@@ -12,14 +12,12 @@ use Kalnoy\Cruddy\Schema\Fields\BaseTextField;
 class CKEditor extends BaseTextField {
 
     /**
-     * {@inheritdoc}
+     * @return string
      */
-    protected $class = 'Cruddy.Fields.CKEditor';
-
-    /**
-     * {@inheritdoc}
-     */
-    protected $type = 'ckeditor';
+    protected function modelClass()
+    {
+        return 'Cruddy.Fields.CKEditor';
+    }
 
     /**
      * @return array

@@ -37,3 +37,5 @@ class Cruddy.Fields.CKEditor extends Cruddy.Fields.Base
         editor_options: @attributes.editor_options
 
     format: (value) -> if value then "<pre class=limit-height>#{ value }</pre>" else super
+
+    getType: -> "ckeditor"

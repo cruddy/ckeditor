@@ -74,6 +74,10 @@
       }
     };
 
+    CKEditor.prototype.getType = function() {
+      return "ckeditor";
+    };
+
     return CKEditor;
 
   })(Cruddy.Fields.Base);
