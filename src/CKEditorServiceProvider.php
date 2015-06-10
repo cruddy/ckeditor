@@ -26,7 +26,7 @@ class CKEditorServiceProvider extends ServiceProvider {
             __DIR__.'/../public' => public_path($this->assets),
             __DIR__.'/../assets/vendor/ckeditor' => public_path($this->assets.'/ckeditor'),
 
-        ], 'assets');
+        ], 'public');
     }
 
     /**

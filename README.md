@@ -15,7 +15,7 @@ Include a service provider:
 Publish assets:
 
 ```
-php artisan vendor:publish
+php artisan vendor:publish --tag="public"
 ```
 
 ## Usage
