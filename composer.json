@@ -10,9 +10,9 @@
     ],
 
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "~5.0",
-        "kalnoy/cruddy": "0.5.*@dev"
+        "php": ">=5.5.9",
+        "illuminate/support": "5.1 - 5.2",
+        "kalnoy/cruddy": "0.5.*"
     },
 
     "autoload": {

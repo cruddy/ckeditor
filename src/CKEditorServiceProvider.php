@@ -6,8 +6,8 @@ use Illuminate\Support\ServiceProvider;
 use Kalnoy\Cruddy\Assets;
 use Kalnoy\Cruddy\Schema\Fields\Factory;
 
-class CKEditorServiceProvider extends ServiceProvider {
-
+class CKEditorServiceProvider extends ServiceProvider
+{
     /**
      * The directory to put assets to.
      *
@@ -23,10 +23,10 @@ class CKEditorServiceProvider extends ServiceProvider {
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/../public' => public_path($this->assets),
-            __DIR__.'/../assets/vendor/ckeditor' => public_path($this->assets.'/ckeditor'),
+                             __DIR__.'/../public' => public_path($this->assets),
+                             __DIR__.'/../assets/vendor/ckeditor' => public_path($this->assets.'/ckeditor'),
 
-        ], 'public');
+                         ], 'public');
     }
 
     /**
@@ -58,13 +58,11 @@ class CKEditorServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app->resolving('cruddy.assets', function ($assets)
-        {
+        $this->app->resolving('cruddy.assets', function ($assets) {
             $this->registerAssets($assets, $this->assets);
         });
 
-        $this->app->resolving('cruddy.fields', function ($factory)
-        {
+        $this->app->resolving('cruddy.fields', function ($factory) {
             $this->registerFields($factory);
         });
     }

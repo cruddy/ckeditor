@@ -9,8 +9,8 @@ use Kalnoy\Cruddy\Schema\Fields\BaseTextField;
  *
  * @method $this config(array $options)
  */
-class CKEditor extends BaseTextField {
-
+class CKEditor extends BaseTextField
+{
     /**
      * @return string
      */
@@ -25,7 +25,7 @@ class CKEditor extends BaseTextField {
     public function toArray()
     {
         return [
-            'editor_options' => $this->get('config', []),
+            'editor_options' => $this->get('config', [ ]),
 
         ] + parent::toArray();
     }
